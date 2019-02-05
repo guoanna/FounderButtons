@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FounderButtons" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcN-6q-lwM">
+                                <rect key="frame" x="16" y="50" width="343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="pyl-sm-YIe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.60056143999099731" green="0.15860462188720703" blue="0.23827135562896729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grG-Fl-2IY">
+                                <rect key="frame" x="16" y="93" width="343" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95655912160873413" green="0.66910427808761597" blue="0.19996923208236694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmR-ln-Pk8">
+                                <rect key="frame" x="16" y="200" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kr4-y9-FXl"/>
+                                </constraints>
+                                <state key="normal" title="Who founded Rent the Runway?"/>
+                                <connections>
+                                    <action selector="rtrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wes-8M-3Ir"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFp-qA-MiC">
+                                <rect key="frame" x="151" y="322" width="73" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="g1x-wr-5Ah"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3a-CA-w83"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qZ-HD-sS5">
+                                <rect key="frame" x="16" y="162" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cds-Dn-vYB"/>
+                                </constraints>
+                                <state key="normal" title="Who Founded Google?"/>
+                                <connections>
+                                    <action selector="googleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83l-AK-LBx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LmR-ln-Pk8" secondAttribute="trailing" constant="16" id="7oO-17-Agz"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="162" id="8Pg-hw-faQ"/>
+                            <constraint firstItem="grG-Fl-2IY" firstAttribute="top" secondItem="qcN-6q-lwM" secondAttribute="bottom" constant="8" symbolic="YES" id="CRQ-Ba-xAA"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="centerX" secondItem="aFp-qA-MiC" secondAttribute="centerX" id="Cv0-5t-peq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2qZ-HD-sS5" secondAttribute="trailing" constant="16" id="FFn-ae-bl5"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Feg-06-UA1"/>
+                            <constraint firstItem="LmR-ln-Pk8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IfF-7K-yJR"/>
+                            <constraint firstItem="qcN-6q-lwM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="O2S-lu-M2C"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="top" secondItem="grG-Fl-2IY" secondAttribute="bottom" constant="22" id="O61-pN-dnA"/>
+                            <constraint firstItem="LmR-ln-Pk8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCd-H1-WAI"/>
+                            <constraint firstItem="aFp-qA-MiC" firstAttribute="top" secondItem="LmR-ln-Pk8" secondAttribute="bottom" constant="92" id="WJK-XP-r4T"/>
+                            <constraint firstItem="aFp-qA-MiC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="abJ-iO-5Aa"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="leading" secondItem="qcN-6q-lwM" secondAttribute="leading" id="bGo-50-SrU"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="trailing" secondItem="qcN-6q-lwM" secondAttribute="trailing" id="bkc-EX-bXx"/>
+                            <constraint firstItem="grG-Fl-2IY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gSW-XY-RC9"/>
+                            <constraint firstItem="LmR-ln-Pk8" firstAttribute="top" secondItem="2qZ-HD-sS5" secondAttribute="bottom" constant="8" symbolic="YES" id="gbs-d7-nye"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="trailing" secondItem="grG-Fl-2IY" secondAttribute="trailing" id="joP-cK-Lfp"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="leading" secondItem="grG-Fl-2IY" secondAttribute="leading" id="n3C-0N-4Ix"/>
+                            <constraint firstItem="aFp-qA-MiC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="nzW-aC-WTw"/>
+                            <constraint firstItem="2qZ-HD-sS5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sfF-UX-3UC"/>
+                            <constraint firstItem="qcN-6q-lwM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zAc-Ok-yKk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="qcN-6q-lwM" id="SKi-bl-Pqj"/>
+                        <outlet property="secondNameLabel" destination="grG-Fl-2IY" id="pRO-Tv-IkE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
